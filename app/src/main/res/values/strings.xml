@@ -2,4 +2,17 @@
     <string name="app_name">BlaBlawild</string>
     <string name="title_activity_second">SecondActivity</string>
     <string name="title_activity_itinerary_list">ItineraryListActivity</string>
+    <string name="departure">Departure</string>
+
+    <string name="name">Name</string>
+    <string name="date">Date</string>
+    <string name="_01_01_1970">01/01/1970</string>
+    <string name="search">SEARCH</string>
+    <string name="search_an_itinerary">Search an itinerary</string>
+    <string name="destination">Destination</string>
+    <string name="_31_12_1970_03_30_pm">31/12/1970 03:30 PM</string>
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="_19">$19</string>
+    <string name="textdeparture">departure</string>
 </resources>
