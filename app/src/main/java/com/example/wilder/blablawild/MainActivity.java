@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                startActivity(new Intent(MainActivity.this,SecondActivity.class));
+                startActivity(new Intent(MainActivity.this,ItinerarySearchActivity.class));
             }
             });
         Button buttongo = findViewById(R.id.button_go);

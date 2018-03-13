@@ -15,7 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class SecondActivity extends AppCompatActivity
+public class ItinerarySearchActivity extends AppCompatActivity
 {
 
     @Override
@@ -23,7 +23,7 @@ public class SecondActivity extends AppCompatActivity
 
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_itinerary_search);
         final EditText editdate = findViewById(R.id.edit_date);
         final EditText editdeparture = findViewById(R.id.edit_departure);
         final EditText editname = findViewById(R.id.edit_name);
@@ -41,11 +41,11 @@ public class SecondActivity extends AppCompatActivity
 
                 if (departure.equals("") || (name.equals("")))
                 {
-                    Toast.makeText(SecondActivity.this, "Please fill your departure and destination!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ItinerarySearchActivity.this, "Please fill your departure and destination!", Toast.LENGTH_LONG).show();
                 }
                 else
                 {
-                    Intent intent = new Intent(SecondActivity.this, ItineraryListActivity.class);
+                    Intent intent = new Intent(ItinerarySearchActivity.this, ItineraryListActivity.class);
                     intent.putExtra("extradeparture", departure);
                     intent.putExtra("extraname", name);
                     startActivity(intent);
@@ -74,7 +74,7 @@ public class SecondActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                new DatePickerDialog(SecondActivity.this, datePicker, mycalendar.get(Calendar.YEAR),
+                new DatePickerDialog(ItinerarySearchActivity.this, datePicker, mycalendar.get(Calendar.YEAR),
                         mycalendar.get(Calendar.MONTH),mycalendar.get(Calendar.DAY_OF_MONTH)).show();
             }
 
