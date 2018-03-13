@@ -113,8 +113,6 @@ public class VehicleActivity extends AppCompatActivity
                             Toast.makeText(VehicleActivity.this, plane.getDescription(), Toast.LENGTH_SHORT).show();
                         }
                     });
-
-
                 }
                 else
                 {

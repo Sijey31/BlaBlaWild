@@ -9,12 +9,11 @@ public class VehicleBoat extends VehicleAbstract
     private int hours;
 
 
-    public VehicleBoat(String brand, String model, int hours) {
+    public VehicleBoat(String brand, String model, int hours)
+    {
         super(brand, model);
         this.hours = hours;
     }
-
-
 
     public int getHours() {
         return hours;
@@ -26,7 +25,8 @@ public class VehicleBoat extends VehicleAbstract
 
 
     @Override
-    public String getDescription() {
+    public String getDescription()
+    {
         return String.format("%s, %s, %s", getBrand(), getModel(), getHours());
     }
 }

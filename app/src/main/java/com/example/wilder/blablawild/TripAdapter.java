@@ -27,7 +27,8 @@ public class TripAdapter extends ArrayAdapter<TripModel>
         // Get the data item for this position
         TripModel trip = getItem(position);
         // Check if an existing view is being reused, otherwise inflate the view
-        if (convertView == null) {
+        if (convertView == null)
+        {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_trip, parent, false);
         }
         // Lookup view for data population
@@ -44,7 +45,6 @@ public class TripAdapter extends ArrayAdapter<TripModel>
         textDate.setText(date);
         String price = "$" +String.valueOf(trip.getPrice());
         textPrice.setText(price);
-
 
         return convertView;
     }

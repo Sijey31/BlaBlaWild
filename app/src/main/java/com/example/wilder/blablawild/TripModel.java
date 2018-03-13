@@ -6,7 +6,8 @@ import java.util.Date;
  * Created by wilder on 06/03/18.
  */
 
-public class TripModel {
+public class TripModel
+{
 
 
     private String firstname;
@@ -14,7 +15,8 @@ public class TripModel {
     private Date date;
     private int price;
 
-    public TripModel(String firstname, String lastname, Date date, int price) {
+    public TripModel(String firstname, String lastname, Date date, int price)
+    {
         this.firstname = firstname;
         this.lastname = lastname;
         this.date = date;
