@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_vehicle">
+        <item>Please select...</item>
+        <item>Car</item>
+        <item>Boat</item>
+        <item>Plane</item>
+    </string-array>
+</resources>

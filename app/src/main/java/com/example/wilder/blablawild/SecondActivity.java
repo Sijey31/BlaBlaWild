@@ -38,8 +38,7 @@ public class SecondActivity extends AppCompatActivity {
                 String departure = editdeparture.getText().toString();
                 String name = editname.getText().toString();
 
-                if
-                        (departure.equals("") || (name.equals("")))
+                if (departure.equals("") || (name.equals("")))
                 {
                     Toast.makeText(SecondActivity.this, "Please fill your departure and destination!", Toast.LENGTH_LONG).show();
                 }
@@ -50,15 +49,11 @@ public class SecondActivity extends AppCompatActivity {
                     intent.putExtra("extraname", name);
                     startActivity(intent);
                 }
-
-
-
             }
         });
 
         final Calendar mycalendar = Calendar.getInstance();
         final DatePickerDialog.OnDateSetListener datePicker = new DatePickerDialog.OnDateSetListener()
-
         {
 
             @Override
@@ -77,7 +72,6 @@ public class SecondActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view)
-
             {
                 new DatePickerDialog(SecondActivity.this, datePicker, mycalendar.get(Calendar.YEAR),
                         mycalendar.get(Calendar.MONTH),mycalendar.get(Calendar.DAY_OF_MONTH)).show();
@@ -87,7 +81,6 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     private void updateLabel(EditText edittext, Calendar mycalendar)
-
     {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE);
         edittext.setText(sdf.format(mycalendar.getTime()));

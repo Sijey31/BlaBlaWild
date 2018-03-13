@@ -14,13 +14,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button buttonitinerary = findViewById(R.id.button_itinerary);
-        buttonitinerary.setOnClickListener(new View.OnClickListener() {
+        buttonitinerary.setOnClickListener(new View.OnClickListener()
+            {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, SecondActivity.class));
+            public void onClick(View view)
+            {
+                startActivity(new Intent(MainActivity.this,SecondActivity.class));
+            }
+            });
+        Button buttongo = findViewById(R.id.button_go);
+        buttongo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                startActivity(new Intent(MainActivity.this,VehicleActivity.class));
             }
         });
-
     }
 
 }

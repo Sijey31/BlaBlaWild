@@ -15,4 +15,13 @@
     <string name="lastname">Lastname</string>
     <string name="_19">$19</string>
     <string name="textdeparture">departure</string>
+    <string name="button">Button</string>
+    <string name="model">Model</string>
+    <string name="brand">Brand</string>
+    <string name="hours">Hours</string>
+    <string name="kilometers">Kilometers</string>
+    <string name="send">Send</string>
+    <string name="speed">Speed</string>
+    <string name="skilometers">Kilometers</string>
+    <string name="shours">Hours</string>
 </resources>

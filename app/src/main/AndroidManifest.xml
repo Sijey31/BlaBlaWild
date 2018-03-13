@@ -19,7 +19,8 @@
         <activity
             android:name=".SecondActivity"
             android:label="@string/app_name" />
-        <activity android:name=".ItineraryListActivity"></activity>
+        <activity android:name=".ItineraryListActivity" />
+        <activity android:name=".VehicleActivity"></activity>
     </application>
 
 </manifest>
