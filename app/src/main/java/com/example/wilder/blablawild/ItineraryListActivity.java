@@ -8,10 +8,13 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+
+import static com.example.wilder.blablawild.ItinerarySearchActivity.EXTRA_SEARCH_MODEL;
 
 public class ItineraryListActivity extends AppCompatActivity
 {
@@ -21,10 +24,12 @@ public class ItineraryListActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_itinerary_list);
-        Intent intent = getIntent();
-        String departList = intent.getStringExtra("extradeparture");
-        String departName = intent.getStringExtra("extraname");
-        setTitle(departList+" >> "+departName);
+
+        SearchModel searchModel = getIntent().getExtras().getParcelable(EXTRA_SEARCH_MODEL);
+
+        setTitle(searchModel.getDeparture() + " >> " + searchModel.getDestination());
+
+        Toast.makeText(this, searchModel.getDate(), Toast.LENGTH_SHORT).show();
 
         ListView listTrip = findViewById(R.id.list_view);
         ArrayList<TripModel> results = new ArrayList<>();

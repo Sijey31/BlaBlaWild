@@ -13,13 +13,37 @@ public class SearchModel implements Parcelable{
     private String date;
 
 
-    protected SearchModel(Parcel in) {
-        departure = in.readString();
-        destination = in.readString();
-        date = in.readString();
+
+    public String getDeparture(){return departure;}
+    public String getDestination(){return destination;}
+    public String getDate(){return date;}
+
+    public SearchModel(String departure,String destination,String date)
+    {
+        this.departure = departure;
+        this.destination = destination;
+        this.date = date;
     }
 
-    public static final Creator<SearchModel> CREATOR = new Creator<SearchModel>() {
+    public SearchModel(Parcel in) {
+        departure= in.readString();
+        destination= in.readString();
+        date= in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(departure);
+        dest.writeString(destination);
+        dest.writeString(date);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Parcelable.Creator<SearchModel> CREATOR = new Parcelable.Creator<SearchModel>() {
         @Override
         public SearchModel createFromParcel(Parcel in) {
             return new SearchModel(in);
@@ -31,20 +55,4 @@ public class SearchModel implements Parcelable{
         }
     };
 
-    public String getDeparture(){return departure;}
-    public String getDestination(){return destination;}
-    public String getDate(){return date;}
-
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(departure);
-        parcel.writeString(destination);
-        parcel.writeString(date);
-    }
 }

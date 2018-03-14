@@ -17,6 +17,7 @@ import java.util.Locale;
 
 public class ItinerarySearchActivity extends AppCompatActivity
 {
+    public static String EXTRA_SEARCH_MODEL = "EXTRA_SEARCH_MODEL";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -38,6 +39,7 @@ public class ItinerarySearchActivity extends AppCompatActivity
 
                 String departure = editdeparture.getText().toString();
                 String name = editname.getText().toString();
+                String date = editdate.getText().toString();
 
                 if (departure.equals("") || (name.equals("")))
                 {
@@ -45,9 +47,9 @@ public class ItinerarySearchActivity extends AppCompatActivity
                 }
                 else
                 {
+                    SearchModel searchModel = new SearchModel(departure, name, date);
                     Intent intent = new Intent(ItinerarySearchActivity.this, ItineraryListActivity.class);
-                    intent.putExtra("extradeparture", departure);
-                    intent.putExtra("extraname", name);
+                    intent.putExtra(EXTRA_SEARCH_MODEL, searchModel);
                     startActivity(intent);
                 }
             }
@@ -80,7 +82,6 @@ public class ItinerarySearchActivity extends AppCompatActivity
 
         });
     }
-
     private void updateLabel(EditText edittext, Calendar mycalendar)
     {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.FRANCE);
